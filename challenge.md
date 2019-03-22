@@ -264,10 +264,27 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
+Answer: When I review other peoples code I think one of the most important factors is 
+making sure the code runs efficiently. This is especially important when working with
+multiple for loops and while loops. Very often your first iteration of a funciton is 
+going to be much less efficient than it could potentially be. For me personally I want
+people to recommend different libraries or functions I could use to solve a problem. 
+This helps me expand my knowledge as a programmer and gives me more tools
+to solve future problems and even current ones.
+
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
+Answer: Well considering how large of a corporation Acme is, you probably implement a 
+multitude of different coding languages, frameworks, libraries, and even operating
+systems to run all of those things. You may not want to use the same operating system 
+or version of python as the research team is using, it can get very messy and create
+very undeterministic code. Containers are useful, because the tools one team is using
+to develop a project is isolated from the tools another team is using. It is also probably
+much cheaper to implement a container system than to implement virtual machines for all your
+employees.
 Answer both of these questions (baseline ~5 sentences) here in text.
 
 ### Part 8 - Turn it in!
