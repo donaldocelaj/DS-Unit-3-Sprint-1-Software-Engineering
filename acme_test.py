@@ -12,8 +12,7 @@ class AcmeProductTests(unittest.TestCase):
     def test_stealability_explode(self):
         """Test stealability method."""
         prod = Product('Test Product', weight=10, price = 10)
-        self.assertEqual(prod.stealability(), "Very stealable!")
-        self.assertEqual(prod.explode(), "...BABOOM!!")
+        self.assertEqual(prod.stealability(), 'Very stealable!')
 
     def test_explode(self):
         """Test Explode method."""
@@ -35,8 +34,9 @@ class AcmeReportTests(unittest.TestCase):
     def test_legal_names(self):
         """Test all names are legal."""
         products = generate_products()
-        names_generated = [i.names_generated for i in products]
-        self.assertEqual(set(names_generated) - set(rand_name), set())
+        for product in products:
+            self.assertIn(product.name.split()[0], ADJECTIVES)
+            self.assertIn(product.name.split()[1], NOUNS)
 
 if __name__ == '__main__':
     unittest.main()
