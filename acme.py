@@ -13,21 +13,21 @@ class Product:
         """Report how likely a product is to be stolen"""
         ratio = self.price / self.weight
         if ratio < .5:
-            print('Not so stealable...')
+            return 'Not so stealable...'
         elif ratio < 1:
-            print('Kinda stealable.')
+            return 'Kinda stealable.'
         else:
-            print('Very stealable!')
+            return 'Very stealable!'
     
     def explode(self):
         """Report how likely a product is to explode"""
         ratio = self.flammability*self.weight
         if ratio < 10:
-            print('...fizzle')
+            return '...fizzle'
         elif 10 <= ratio < 50:
-            print('...boom')
+            return '...boom' 
         else:
-            print('...BABOOM!!')
+            return '...BABOOM!!'
 
 class BoxingGlove(Product):
     """One of the products sold at Acme"""
